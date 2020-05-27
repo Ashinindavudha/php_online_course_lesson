@@ -1,0 +1,215 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+
+    <title>POST CARD</title>
+
+    <link rel="stylesheet" href="style/main.css">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+
+        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+ 
+
+    <script type="text/javascript" src="../asset/js/jquery-3.3.1-min.js"></script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Montserrat|Open+Sans:300,400|Roboto');
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+}
+body {
+    background: #fff;
+}
+.card {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 550px;
+    height: 500px;
+    background-color: #fafafa;
+    color: #212121;
+    border-radius: 15px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0px 1px 15px rgba(35, 35, 35, .8);
+}
+.card img {
+    width: 100%;
+}
+.black {
+    z-index: 2;
+    background-color: rgba(35, 35, 35, .6);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 15px;
+    color: #fafafa;
+    transition: opacity .4s ease-in-out;
+    opacity: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+.black img {
+    width: 64px;
+    height: 64px;
+    border-radius: 100%;
+    border: 2px solid #fafafa;
+    float: left;
+}
+.black .text_info {
+    float: left;
+    margin-left: 15px;
+    margin-top: 15px;
+}
+.text {
+    position: absolute;
+    bottom: 0;
+    z-index: 3;
+    padding: 15px 15px 0 15px;
+    height: auto;
+    background-color: #fafafa;
+}
+.desc {
+    width: calc(100%);
+    background-color: #fafafa;
+    overflow: hidden;
+    margin-bottom: -300px;
+    opacity: 0;
+    transition: all .4s ease-in-out;
+}
+.desc h1 {
+    margin-bottom: 15px;
+    font-family: 'Open Sans', sans-serif;
+}
+.desc p {
+    font-size: .9rem;
+    line-height: 1.8rem;
+    font-family: 'Montserrat', sans-serif;
+}
+.info {
+    height: calc(100% + 30px);
+    width: calc(100% + 30px);
+    background-color: #fafafa;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    left: 50%;
+    padding: 15px 0;
+    transform: translateX(-50%);
+}
+.info h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+}
+.info .col {
+    width: 33%;
+}
+.info .col i {
+    font-size: 1.8rem;
+}
+.card:hover .desc {
+    margin-bottom: 15px;
+    opacity: 1;
+}
+.card:hover .black {
+    opacity: 1;
+}
+    </style>
+
+</head>
+
+<body>
+
+    <div id="test" class="card">
+
+        <div class="cover">
+
+            <img src="img_res/cover.jpg">
+
+            <div class="black">
+
+                <img src="img_res/profile.png">
+
+                <div class="text_info">
+
+                    <p>Doctor code</p>
+
+                    <p>my work space , this is an image </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="text">
+
+            <div class="desc">
+
+               <h1>Description :</h1>
+
+                <p>
+
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce fermentum pellentesque scelerisque.
+
+                    Proin iaculis ante velit, sit amet mollis lacus blandit non. Aenean sed dolor sed nibh feugiat
+
+ 
+
+                    dapibus a id mauris. Proin in neque eget metus dapibus tempor ac eu leo. Nunc vestibulum ut felis ac
+
+                    blandit. Pellentesque faucibus quam quis orci tincidunt tempor. In hac habitasse platea dictumst.
+
+                    Aenean arcu sem, feugiat sed nisl in, tempus rutrum mi.
+
+                </p>
+
+            </div>
+
+            <div id="test" class="info">
+
+                <div class="col">
+
+                    <h1>220K</h1>
+
+                   <i class="far fa-heart"></i>
+
+                </div>
+
+                <div class="col">
+
+                    <h1>5.4M</h1>
+
+                    <i class="far fa-eye"></i>
+
+                </div>
+
+                <div class="col">
+
+                    <h1>32K</h1>
+
+                    <i class="fas fa-share-alt"></i>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
